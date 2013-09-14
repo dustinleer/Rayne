@@ -1,4 +1,4 @@
-travistaylor
+Rayne
 ============
 
-the WordPress theme for my personal blog @ travistaylor.com
+A free WordPress theme I developed for my personal blog @ travistaylor.com
