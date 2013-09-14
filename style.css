@@ -1,0 +1,877 @@
+/*
+Theme Name: Travis Taylor
+*/
+
+/* =Reset
+-------------------------------------------------------------- */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	border: 0;
+	font-family: inherit;
+	font-size: 100%;
+	font-style: inherit;
+	font-weight: inherit;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+html {
+	font-size: 62.5%; /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
+	overflow-y: scroll; /* Keeps page centred in all browsers regardless of content height */
+	-webkit-text-size-adjust: 100%; /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
+	-ms-text-size-adjust: 100%; /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
+}
+body {
+	background: #fff;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+nav,
+section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+table { /* tables still need 'cellspacing="0"' in the markup */
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	font-weight: normal;
+	text-align: left;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+a:focus {
+	outline: thin dotted;
+}
+a:hover,
+a:active { /* Improves readability when focused and also mouse hovered in all browsers people.opera.com/patrickl/experiments/keyboard/test */
+	outline: 0;
+}
+a img {
+	border: 0;
+}
+
+
+/* =Global
+----------------------------------------------- */
+
+body,
+button,
+input,
+select,
+textarea {
+	color: #404040;
+	font-family: sans-serif;
+	font-size: 16px;
+	font-size: 1.6rem;
+	line-height: 1.5;
+}
+
+/* Headings */
+h1,h2,h3,h4,h5,h6 {
+	clear: both;
+}
+hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+/* Text elements */
+p {
+	margin-bottom: 1.5em;
+}
+ul, ol {
+	margin: 0 0 1.5em 3em;
+}
+ul {
+	list-style: disc;
+}
+ol {
+	list-style: decimal;
+}
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: 1.5em;
+}
+dt {
+	font-weight: bold;
+}
+dd {
+	margin: 0 1.5em 1.5em;
+}
+b, strong {
+	font-weight: bold;
+}
+dfn, cite, em, i {
+	font-style: italic;
+}
+blockquote {
+	margin: 0 1.5em;
+}
+address {
+	margin: 0 0 1.5em;
+}
+pre {
+	background: #eee;
+	font-family: "Courier 10 Pitch", Courier, monospace;
+	font-size: 15px;
+	font-size: 1.5rem;
+	line-height: 1.6;
+	margin-bottom: 1.6em;
+	padding: 1.6em;
+	overflow: auto;
+	max-width: 100%;
+}
+code, kbd, tt, var {
+	font: 15px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+abbr, acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+mark, ins {
+	background: #fff9c0;
+	text-decoration: none;
+}
+sup,
+sub {
+	font-size: 75%;
+	height: 0;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+sup {
+	bottom: 1ex;
+}
+sub {
+	top: .5ex;
+}
+small {
+	font-size: 75%;
+}
+big {
+	font-size: 125%;
+}
+figure {
+	margin: 0;
+}
+table {
+	margin: 0 0 1.5em;
+	width: 100%;
+}
+th {
+	font-weight: bold;
+}
+img {
+	height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */
+}
+button,
+input,
+select,
+textarea {
+	font-size: 100%; /* Corrects font size not being inherited in all browsers */
+	margin: 0; /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
+	vertical-align: baseline; /* Improves appearance and consistency in all browsers */
+	*vertical-align: middle; /* Improves appearance and consistency in all browsers */
+}
+button,
+input {
+	line-height: normal; /* Addresses FF3/4 setting line-height using !important in the UA stylesheet */
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	background: #349c79;
+	border: none;
+	color: #fff;
+	cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
+	-webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */
+	font-size: 14px;
+	font-weight: 600;
+	padding: 10px 20px;
+
+}
+button:hover,
+html input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+	background: #68ceac;
+   transition: background 50ms linear;
+   -moz-transition: background 50ms linear;
+   -webkit-transition: background 50ms linear;
+}
+button:focus,
+html input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus,
+button:active,
+html input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active {
+	background: #68ceac;
+}
+input[type="checkbox"],
+input[type="radio"] {
+	box-sizing: border-box; /* Addresses box sizing set to content-box in IE8/9 */
+	padding: 0; /* Addresses excess padding in IE8/9 */
+}
+input[type="search"] {
+	-webkit-appearance: textfield; /* Addresses appearance set to searchfield in S5, Chrome */
+	-webkit-box-sizing: content-box; /* Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */
+	-moz-box-sizing:    content-box;
+	box-sizing:         content-box;
+}
+input[type="search"]::-webkit-search-decoration { /* Corrects inner padding displayed oddly in S5, Chrome on OSX */
+	-webkit-appearance: none;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner { /* Corrects inner padding and border displayed oddly in FF3/4 www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ */
+	border: 0;
+	padding: 0;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+textarea {
+	color: #666;
+	border: 1px solid #dddddd;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+textarea:focus {
+	color: #4f4f4f;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"] {
+	padding: 9px;
+}
+textarea {
+	overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9 */
+	padding-left: 3px;
+	vertical-align: top; /* Improves readability and alignment in all browsers */
+	width: 96%;
+	padding: 9px;
+}
+
+/* Links */
+a {
+	color: #349C79;
+	text-decoration: none;
+}
+a:visited {
+	color: #349C79;
+}
+a:hover,
+a:focus,
+a:active {
+	color: #349C79;
+	text-decoration: underline;
+}
+
+/* Alignment */
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+.aligncenter {
+	clear: both;
+	display: block;
+	margin: 0 auto;
+}
+
+/* Clearing */
+.clear:before,
+.clear:after,
+[class*="content"]:before,
+[class*="content"]:after,
+[class*="site"]:before,
+[class*="site"]:after {
+	content: '';
+	display: table;
+}
+
+.clear:after,
+[class*="content"]:after,
+[class*="site"]:after {
+	clear: both;
+}
+
+/* =Begin
+-------------------------------------------------------------- */
+
+
+body, html {
+	height: 100%;
+}
+#container {
+	display: table;
+	table-layout: fixed;
+	height: 100%;
+	width: 100%;
+}
+
+
+/* =Left Side
+-------------------------------------------------------------- */
+
+#left-side {
+	display: table-cell;
+	vertical-align: top;
+	width: 240px;
+	background: #349C79;
+}
+#logo {
+	height: 230px;
+	overflow: hidden;
+}
+#left-side #logo a {
+	font-family: 'Qwigley', cursive;
+	font-size: 265px;
+	color: #68ceac;
+	text-decoration: none;
+	margin-left:24px;
+	margin-top:-55px;
+	display: block;
+	overflow: hidden;
+}
+#navigation ul {
+	margin: 0;
+}
+#navigation li {
+	list-style: none;
+}
+#navigation a {
+	border-left:5px solid transparent;
+	color: #fff;
+	font-size: 14px;
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 10px 20px 10px 30px;
+	display: block;
+   transition: background 50ms linear;
+   -moz-transition: background 50ms linear;
+   -webkit-transition: background 50ms linear;
+}
+#navigation a:hover {
+	background: #68ceac;
+}
+#navigation li.current_page_item a {
+	border-left:5px solid #68CEAC;
+	background: #68ceac;
+}
+#navigation span {
+	margin-right: 7px;
+}
+
+
+/* =Right Side
+-------------------------------------------------------------- */
+
+
+#top {
+	background: #4f4f4f;
+	height: 51px;
+	position: relative;
+}
+a#travis-taylor-small-pic {
+	margin: 7px 20px 0 60px;
+	display:inline-block;
+	vertical-align: middle;
+}
+#top h1 {
+	display:inline-block;
+	vertical-align: middle;
+	font-family: 'Metrophobic', sans-serif;
+	font-weight: bold;
+	letter-spacing: -1px;
+	font-size: 14px;
+	margin-right: 15px;
+	color: #fff;
+	margin-top: 2px;
+}
+#top h1 a {
+	color: #fff;
+}
+#top h2 {
+	display:inline-block;
+	vertical-align: middle;
+	color: #b9b9b9;
+	font-family: 'Metrophobic', sans-serif;
+	font-size: 14px;
+	margin-top: 2px;
+}
+#top h2 span {
+	margin: 0 5px;
+}
+#social-icons {
+	float: right;
+	margin: 12px 20px 0 0;
+	font-size: 18px;
+}
+#social-icons ul {
+	list-style: none;
+}
+#social-icons li {
+	display: inline-block;
+}
+#social-icons a {
+	display: block;
+	float: left;
+	margin-right: 10px;
+	color: #b9b9b9;
+	text-decoration: none;
+}
+#social-icons a:hover {
+	color: #fff;
+}
+
+/* =Content
+-------------------------------------------------------------- */
+
+@keyframes movein {
+	0% {opacity:0; margin-left:0px;}
+	30% {margin-left:60px;}
+	100% {opacity:1;}
+}
+@-webkit-keyframes movein /* Safari and Chrome */ {
+	0% {opacity:0; margin-left:0px;}
+	30% {margin-left:60px;}
+	100% {opacity:1;}
+}
+#content {
+	width: 620px;
+	margin: 45px 0 60px 60px;
+	font-family: 'Open Sans', sans-serif;
+	color: #4f4f50;
+	font-size: 16px;
+	line-height: 26px;
+	animation: movein 750ms;
+	-webkit-animation: movein 750ms; /* Safari and Chrome */
+}
+#content h2,
+#content h2.post-title, 
+#content h2.post-title a {
+	font-family: 'Fenix', serif;
+	font-size: 40px;
+	color: #353535;
+	margin-bottom: 25px;
+	line-height: 48px;
+	text-decoration: none;
+}
+#content h2.post-title a:hover {
+	text-decoration: underline;
+}
+.postmetadata {
+	background: #f5f5f5;
+	padding: 5px 12px;
+	font-size: 12px;
+	color: #939393;
+	margin: 8px 0 30px;
+}
+.postmetadata a {
+	color: #939393;
+	text-decoration: none;
+}
+.postmetadata a:hover {
+	text-decoration: underline;
+}
+span.date,
+span.category, 
+span.tags {
+	margin-right: 15px;
+}
+span.comments-count {
+	float: right;
+	color: #349C79;
+}
+span.comments-count a {
+	color: #349C79;
+}
+.postmetadata span span {
+	margin-right:3px; /* effects the icons */
+}
+.postmetadata span.comment-icon {
+	margin-right:0;
+	margin-left:3px;
+}
+
+/* =Comments
+-------------------------------------------------------------- */
+
+li.comment {
+	list-style: none;
+	margin-bottom: 30px;
+}
+.comment-body {
+	margin-bottom: 10px;
+}
+li.comment ul.children {
+	margin-left:2.5em;
+}
+.comment-table {
+	display: table;
+	table-layout: fixed;
+	width:100%;
+}
+.comment-author {
+	display: table-cell;
+	vertical-align: top;
+	width: 72px;
+}
+.comment-author img {
+	border-radius: 31px;
+	text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+cite.fn {
+	display: block;
+	text-align: center;
+	font-style: normal;
+	color: #349c79;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 22px;
+}
+.comment-table .spacer {
+	width:25px;
+	display: table-cell;
+	vertical-align: top;
+}
+.comment-box {
+	border:1px solid #dddddd;
+	padding: 15px 25px 0 25px;
+	display: table-cell;
+	vertical-align: top;
+	position: relative;
+	margin-left:10px;
+}
+.comment-triangle:after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 11px;
+	left: -32px;
+	width: 0;
+	height: 0;
+	border-color: transparent #fff transparent transparent ;
+	border-style: solid;
+	border-width: 16px;
+}
+.comment-triangle:before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 10px;
+	left: -34px;
+	width: 0;
+	height: 0;
+	border-color: transparent #dddddd transparent transparent;
+	border-style: solid;
+	border-width: 17px;
+}
+.comment-meta, 
+.comment-meta a {
+	color: #b7b6b6;
+	text-decoration: none;
+	font-size: 13px;
+}
+.comment-meta {
+	margin-bottom: 7px;
+}
+.reply {
+	text-align: right;
+	margin:8px 0 15px;
+	font-size: 12px;
+}
+.reply a {
+	color: #939393;
+	text-decoration: none;
+}
+.reply a:hover {
+	color: #636363;
+}
+h3.leave-comment {
+	font-size: 24px;
+	font-family: 'Fenix', serif;
+	margin-bottom: 15px;
+}
+form#commentform input {
+	width:96%;
+}
+form#commentform input[type="submit"] {
+	width:auto;
+}
+form#commentform label {
+	font-weight: 600;
+	font-size: 14px;
+}
+form#commentform p {
+	margin-bottom:10px;
+}
+em.comment-awaiting-moderation {
+	color: #ECA100;
+	font-weight: 500;
+	font-size: 15px;
+}
+p.logged-in-as {
+	font-size: 14px;
+}
+p.comment-notes {
+	font-size: 14px;
+}
+@keyframes fadein {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+@-webkit-keyframes fadein /* Safari and Chrome */ {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+#respond {
+	margin-bottom: 30px;
+	background: #F5F5F5;
+	padding: 20px 23px 10px 23px;
+	animation: fadein 800ms;
+	-webkit-animation: fadein 800ms; /* Safari and Chrome */
+}
+
+
+/* =Archive
+-------------------------------------------------------------- */
+
+h2#archiveTitle {
+	color:#349C79;
+	margin-bottom: 20px;
+	font-family: 'Fenix', serif;
+	font-size: 22px;
+}
+h2#archiveTitle span {
+	margin-right:6px;
+}
+
+
+#font-ref {
+	font-family: 'Fenix', serif;
+	font-family: 'Metrophobic', sans-serif;
+	font-family: 'Montserrat', sans-serif;
+	font-family: 'Open Sans', sans-serif;
+	font-family: 'travistaylor';
+}
+
+
+/* =Portfolio
+-------------------------------------------------------------- */
+
+.page-template-tempportfolio-php #content {
+	width:640px;
+}
+.artwork img {
+	border-radius: 97px;
+	display: block;
+	opacity: .2;
+   transition: opacity .1s ease-in-out;
+   -moz-transition: opacity .1s ease-in-out;
+   -webkit-transition: opacity .1s ease-in-out;
+}
+.artwork img:hover {
+	opacity: 1;
+	cursor: pointer;
+}
+.artwork {
+	border-radius: 97px;
+	float: left;
+	margin: 0 20px 20px 0;
+	background: #349C79;
+}
+
+
+/* =Fonts
+-------------------------------------------------------------- */
+
+
+@font-face {
+	font-family: 'travistaylor';
+	src:url('fonts/travistaylor.eot');
+	src:url('fonts/travistaylor.eot?#iefix') format('embedded-opentype'),
+		url('fonts/travistaylor.woff') format('woff'),
+		url('fonts/travistaylor.ttf') format('truetype'),
+		url('fonts/travistaylor.svg#travistaylor') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+	font-family: 'travistaylor';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="travistaylor-icons"] {
+*/
+.travistaylor-iconstwitter, .travistaylor-iconsfolder-open, .travistaylor-iconstag, .travistaylor-iconsdribbble, .travistaylor-iconsgithub, .travistaylor-iconsbriefcase, .travistaylor-iconsenvelop, .travistaylor-iconsinfo, .travistaylor-iconsclock, .travistaylor-iconsundo, .travistaylor-iconsbubbles {
+	font-family: 'travistaylor';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+.travistaylor-iconstwitter:before {
+	content: "\74";
+}
+.travistaylor-iconsfolder-open:before {
+	content: "\63";
+}
+.travistaylor-iconstag:before {
+	content: "\61";
+}
+.travistaylor-iconsdribbble:before {
+	content: "\64";
+}
+.travistaylor-iconsgithub:before {
+	content: "\67";
+}
+.travistaylor-iconsbriefcase:before {
+	content: "\70";
+}
+.travistaylor-iconsenvelop:before {
+	content: "\65";
+}
+.travistaylor-iconsinfo:before {
+	content: "\69";
+}
+.travistaylor-iconsclock:before {
+	content: "\6c";
+}
+.travistaylor-iconsundo:before {
+	content: "\72";
+}
+.travistaylor-iconsbubbles:before {
+	content: "\6d";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
