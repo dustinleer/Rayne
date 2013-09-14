@@ -1,11 +1,12 @@
 /*
-Theme Name: Travis Taylor
+Theme Name: Rayne
 Theme URI: http://travistaylor.com/
-Description: Theme for my personal blog
+Description: Theme for my personal blog, named after my daughter Sadie Rayne Taylor.
 Author: Travis Taylor
 Author URI: http://travistaylor.com/
 Version: 1.0
 */
+
 
 /* =Reset
 -------------------------------------------------------------- */
@@ -489,8 +490,8 @@ a#travis-taylor-small-pic {
 	color: #4f4f50;
 	font-size: 16px;
 	line-height: 26px;
-	animation: movein 750ms;
-	-webkit-animation: movein 750ms; /* Safari and Chrome */
+	animation: movein 1500ms cubic-bezier(0.19, 1, 0.22, 1);
+	-webkit-animation: movein 1500ms cubic-bezier(0.19, 1, 0.22, 1); /* Safari and Chrome */
 }
 #content h2,
 #content h2.post-title, 
@@ -523,6 +524,7 @@ span.date,
 span.category, 
 span.tags {
 	margin-right: 15px;
+	float: left;
 }
 span.comments-count {
 	float: right;
@@ -537,6 +539,9 @@ span.comments-count a {
 .postmetadata span.comment-icon {
 	margin-right:0;
 	margin-left:3px;
+}
+.postmeta-left {
+	width: 475px;
 }
 
 /* =Comments

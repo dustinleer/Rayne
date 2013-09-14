@@ -16,7 +16,7 @@ function add_custom_post_types() {
         'show_ui' => true,
         'show_in_menu' => true,
         'query_var' => true,
-        'rewrite' => array( 'slug' => 'portfolio' ),
+        'rewrite' => array( 'slug' => 'art' ),
         'has_archive' => true,
         'hierarchical' => false,
         'menu_position' => null,
